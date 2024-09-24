@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is the bias-variance tradeoff?",
+    "answer": "The tradeoff between underfitting and overfitting"
+  },
+  {
+    "question": "What is a confusion matrix?",
+    "answer": "A table that is used to describe the performance of a classification model"
+  },
+  {
+    "question": "What is overfitting?",
+    "answer": "When a model learns noise in the training data and performs poorly on unseen data"
+  }
+]
