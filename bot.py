@@ -1,4 +1,3 @@
-import asyncio
 import os
 import json
 import logging
@@ -33,9 +32,9 @@ questions = load_questions()
 # Start Command - Triggered when user starts the bot
 async def start(update: Update, context: CallbackContext):
     await update.message.reply_text(
-        "Hello! I'm your LLM-Interview bot. \
-        I will ask you machine learning interview questions. \
-        Type /start_interview to begin."
+        "Hello! I'm your LLM-Interview bot.\n" + \
+        "I will ask you machine learning interview questions.\n" + \
+        "Type /start_interview to begin."
     )
 
 
@@ -91,11 +90,16 @@ async def cancel(update: Update, context: CallbackContext):
 
 # Main Function to Start the Bot
 def build_application():
+    telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN", None)
+    if telegram_bot_token is None:
+        logger.error("Telegram Bot Token not found. Please set the TELEGRAM_BOT_TOKEN environment variable.")
+        return
+
     # Initialize the bot with your token
-    application = ApplicationBuilder().token(
-        # TODO: fix and add the error message if no token is provided
-        os.getenv("TELEGRAM_BOT_TOKEN", None)
-    ).concurrent_updates(True).build()
+    application = ApplicationBuilder() \
+        .token(telegram_bot_token) \
+        .concurrent_updates(True) \
+        .build()
 
     # Command handler for /start
     start_handler = CommandHandler('start', start)
@@ -122,6 +126,11 @@ def build_application():
 
 def main():
     app = build_application()
+
+    # If something goes wrong
+    if app is None:
+        return
+
     app.run_polling()
 
 
