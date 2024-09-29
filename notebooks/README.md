@@ -25,3 +25,4 @@ Notebook link: http://localhost:9999/notebooks/notebooks/parse_questions_and_ans
 
 * Main documentation: https://docs.jupyter.org/en/latest/running.html
 * Issues with extensions: https://github.com/jupyterlab/jupyterlab/issues/14965
+* Fixed with: https://stackoverflow.com/a/73268521/14715428
