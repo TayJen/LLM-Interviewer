@@ -1,1 +1,6 @@
-1. https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/tree/main
+1. Github + Medium
+https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/tree/main
+2. Github
+https://github.com/alexeygrigorev/data-science-interviews/tree/master
+3. Github
+
