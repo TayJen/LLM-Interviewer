@@ -4,6 +4,8 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/notebooks/.ipynb_checkpoints" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/notebooks/questions_data" />
+      <excludeFolder url="file://$MODULE_DIR$/notebooks/questions_data/.ipynb_checkpoints" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.11 (LLM-Interviewer)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

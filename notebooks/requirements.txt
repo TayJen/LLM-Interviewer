@@ -5,6 +5,9 @@ ipython==8.27.0
 ipykernel==6.29.5
 ipywidgets==8.1.5
 
-jupyter-resource-usage
-jupyter_scheduler
-jupyterlab-git
+jupyter-resource-usage==1.1.0
+jupyter_scheduler==2.9.0
+jupyterlab-git==0.50.1
+
+beautifulsoup4==4.12.3
+lxml==5.3.0
