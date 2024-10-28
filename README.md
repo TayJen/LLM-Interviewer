@@ -70,3 +70,22 @@
 
 * Общая Accuracy - 86%
      
+## Структура проекта
+
+```
+LLM-Interviewer/
+├── bot.py                      # Main bot setup and initialization
+├── handlers/
+│   ├── start.py                # Handles start and topic selection
+│   ├── interview.py            # Manages interview flow (question/answer, hint, etc.)
+├── utils/
+│   ├── question_loader.py      # Utility to load and manage questions from JSON
+│   ├── hints.py                # Utility for handling hints
+│   ├── resources_loader.py     # Utility to fetch resources for each question
+│   └── progress_tracker.py     # Utility for tracking progress and resuming sessions
+└── interview_questions.json    # The questions JSON file
+```
+
+## Авторы
+
+Евгений Тайчинов и Елизавета Талынкова
