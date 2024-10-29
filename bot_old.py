@@ -22,7 +22,7 @@ ASKING_QUESTION, RECEIVING_ANSWER = range(2)
 
 # Load questions from JSON file
 def load_questions():
-    with open('interview_questions.json', 'r') as file:
+    with open('data/interview_questions.json', 'r') as file:
         return json.load(file)
 
 
