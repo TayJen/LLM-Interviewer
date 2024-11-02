@@ -6,8 +6,6 @@ notebooks/chroma_yandex_db/
 data/
 .idea/
 
-.DS_Store
-
 # Nohup running terminals
 nohup.out
 .DS_Store
