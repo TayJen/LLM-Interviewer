@@ -1,5 +1,8 @@
 # Data
 notebooks/questions_data/
+data/
+
+.DS_Store
 
 # Nohup running terminals
 nohup.out
