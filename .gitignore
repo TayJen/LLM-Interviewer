@@ -1,6 +1,8 @@
 # Data
 notebooks/questions_data/
+notebooks/chroma_langchain_db/
 data/
+.idea/
 
 .DS_Store
 
