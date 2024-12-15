@@ -1,6 +1,8 @@
 # Data
 notebooks/questions_data/
 notebooks/chroma_langchain_db/
+notebooks/chroma_yandex_db/
+
 data/
 .idea/
 
