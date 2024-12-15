@@ -4,3 +4,11 @@ https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/tree/ma
 https://github.com/alexeygrigorev/data-science-interviews/tree/master
 3. Github
 https://github.com/iamtodor/data-science-interview-questions-and-answers/tree/master
+
+
+#0 Yandex ML Handbook
+https://gitlab.com/yandexdataschool/ml-handbook/-/tree/master?ref_type=heads
+#1 Ian Goodfellow - Deep Learning
+https://github.com/Chandra0505/Data-Science-Resources/blob/master/machine-learning/Deep%20Learning-Ian%20Goodfellow.pdf
+#2 Practical Statistics
+https://github.com/Chandra0505/Data-Science-Resources/blob/master/machine-learning/Practical%20Statistics%20for%20Data%20Scientists.pdf
