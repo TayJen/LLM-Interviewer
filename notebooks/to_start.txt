@@ -1,0 +1,9 @@
+# Turn on
+source venv/bin/activate
+nohup jupyter notebook --port 7777
+
+# Set up the kernel
+python3 -m ipykernel install --user --name=llm_course
+
+# Shutdown
+**internally in jupyter**
