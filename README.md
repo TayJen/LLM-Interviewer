@@ -74,16 +74,33 @@
 
 ```
 LLM-Interviewer/
-├── bot.py                      # Main bot setup and initialization
-├── handlers/
-│   ├── start.py                # Handles start and topic selection
-│   ├── interview.py            # Manages interview flow (question/answer, hint, etc.)
-├── utils/
-│   ├── question_loader.py      # Utility to load and manage questions from JSON
-│   ├── hints.py                # Utility for handling hints
-│   ├── resources_loader.py     # Utility to fetch resources for each question
-│   └── progress_tracker.py     # Utility for tracking progress and resuming sessions
-└── interview_questions.json    # The questions JSON file
+├── bot_new.py                              # Main bot setup and initialization
+├── config.yaml                             # Configuration file for bot settings
+├── requirements.txt                        # Python dependencies for the bot
+├── .env                                    # Environment variables for sensitive data
+├── data/                                   # Directory for data-related resources
+│   ├── data_31_10_2024/                    # Static questions and answers
+│   └── RAG/                                # Books and documents for the RAG pipeline
+├── handlers/                               # Contains handlers for bot commands and interactions
+│   ├── interview.py                        # Manages interview flow (questions, answers, etc.)
+│   └── start.py                            # Handles start and topic selection
+├── notebooks/                              # Jupyter notebooks and related resources
+│   ├── chroma_yandex_db/                   # Folder containing vector store files
+│   ├── eval_rag_artifacts/                 # Artifacts for evaluating RAG
+│   ├── questions_data/                     # Raw questions extracted from parsing
+│   ├── evaluate_rag.ipynb                  # Notebook to evaluate RAG pipeline
+│   ├── parse_for_RAG.ipynb                 # Notebook for parsing data for RAG
+│   ├── parse_questions_and_answers.ipynb   # Notebook to parse static questions
+│   ├── RAG_inference_example.ipynb         # Notebook demonstrating RAG inference
+│   ├── README.md                           # Instructions for launching the notebooks
+│   ├── requirements.txt                    # Notebook-specific Python dependencies
+│   ├── resources_to_parse_questions.txt    # List of resources for question parsing
+│   └── to_start.txt                        # Steps to launch the notebooks
+├── utils/                                  # Utility functions and modules
+│   ├── question_loader.py                  # Utility to load and manage static questions
+│   ├── rag_pipeline.py                     # Implements the RAG pipeline
+│   └── stages.py                           # Utilities for managing bot stages and transitions
+└── README.md                               # Documentation
 ```
 
 ## Авторы
