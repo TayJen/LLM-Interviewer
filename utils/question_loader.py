@@ -12,11 +12,13 @@ class Questionnaire:
     def __init__(self, config: dict):
         self.questions_path = config.get('questions_data_path', None)
         self.topics_list: list[str] = []
+        self.rag_topics_list: list[str] = config.get('rag_topics_list', [])
+
         self.all_questions_and_answers_dict: dict[str, dict[str, str]] = {}
         self.all_questions_list: dict[str: list[str]] = {}
 
         self._setup_and_load()
-        logging.info("Initialized Questionnaire")
+        logging.info(f"Initialized Questionnaire, total number of RAG topics: {len(self.rag_topics_list)}")
 
     def _setup_and_load(self):
         if self.questions_path is None:
@@ -57,6 +59,9 @@ class Questionnaire:
     def get_topics(self) -> list:
         return self.topics_list
 
+    def get_rag_topics(self) -> list:
+        return self.rag_topics_list
+
     def get_topic_by_idx(self, topic_idx: int) -> str:
         if topic_idx >= len(self.topics_list):
             logger.info(f"{topic_idx} is not in the list of topics")
@@ -64,6 +69,15 @@ class Questionnaire:
 
         topic_name = self.topics_list[topic_idx]
         logger.info(f"Got topic {topic_name} with idx {topic_idx}")
+        return topic_name
+
+    def get_rag_topic_by_idx(self, topic_idx: int) -> str:
+        if topic_idx >= len(self.rag_topics_list):
+            logger.info(f"{topic_idx} is not in the list of RAG topics")
+            return ""
+
+        topic_name = self.rag_topics_list[topic_idx]
+        logger.info(f"Got RAG topic {topic_name} with idx {topic_idx}")
         return topic_name
 
     def get_questions_by_topic(self, topic_name: str) -> dict:
